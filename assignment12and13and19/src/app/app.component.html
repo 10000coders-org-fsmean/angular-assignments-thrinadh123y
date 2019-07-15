@@ -1,0 +1,10 @@
+<h2>hello</h2>
+<img *ngIf="visible" src="../assets/images/sam1.jpg" style="width: 60%;height:300px" id="image"><br>
+<button type="button" (click)="hide()">HIDE</button>
+<button type="button" (click)="show()">SHOW</button>
+<div *ngFor="let obj of images" id="main">
+  <img id="images" src="{{obj.url}}" (click)="big(obj)" style="width: 20%;height:200px;float: left;margin-right: 10px">
+</div>
+<div>
+  <app-detail></app-detail>
+</div>

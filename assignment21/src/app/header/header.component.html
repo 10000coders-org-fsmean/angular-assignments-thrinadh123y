@@ -1,0 +1,14 @@
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1 *ngFor="let obj1 of main"><a href="#">{{obj1.title}}</a></h1>
+      <h2 *ngFor="let obj1 of main">{{obj1.para}}</h2>
+    </div>
+    <nav>
+      <ul>
+        <li *ngFor="let obj of nav"><a href="{{obj.url}}">{{obj.name}}</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<router-outlet></router-outlet>

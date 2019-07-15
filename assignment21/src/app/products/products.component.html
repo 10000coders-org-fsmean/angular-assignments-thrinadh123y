@@ -1,0 +1,21 @@
+<p>
+  products works!
+</p>
+<button>Create A Product</button>
+<ul style="list-style: circle;float: left;">
+  <li *ngFor="let obj1 of products;let i=index" style="float:left;margin-right: 100px;" >
+    <span (click)="editProduct(obj1,i)">{{obj1.name}}</span> <span (click)="deleteProduct(obj1,i)">X</span> <br>
+   <p style="color: blueviolet">Price : {{obj1.price}}</p>
+<p style="color:blue">Brand : {{obj1.brand}}</p>
+  </li>
+</ul>
+<br>
+<form #myform *ngIf="editedobj">
+  <label>Product Name</label>
+  <input type="text" name="name" [(ngModel)]='editedobj.name'><br>
+  <label>Price</label>
+  <input type="text" name="price" [(ngModel)]='editedobj.price'><br>
+  <label>Brand</label>
+  <input type="text" name="brand" [(ngModel)]='editedobj.brand'><br>
+  <button type="button" (click)="update()">UPDATE</button>
+</form>

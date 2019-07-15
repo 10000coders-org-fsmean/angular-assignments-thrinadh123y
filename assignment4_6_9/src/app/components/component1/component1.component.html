@@ -1,0 +1,18 @@
+<p>
+  component1 works!
+</p>
+<ul>
+  <li *ngFor="let obj of users;let i=index" style="padding:3px;">
+<span (click)="selectUser(obj)">{{obj.title}}</span>
+
+<button (click)="delete(i)" style="margin-left: 5px;">Delete
+  </button>
+  </li>
+</ul>
+<form #myform='ngForm' style="border: 1px solid black;padding:15px">
+  <label>Title: </label>
+<input type="text" name="title" ngModel style="margin: 12px"><br>
+<label>Author:</label>
+<input type="text" name="author" ngModel><br>
+<button (click)='adddata(myform.value)' type="button" style="margin: 10px 200px">AddData</button>
+</form>

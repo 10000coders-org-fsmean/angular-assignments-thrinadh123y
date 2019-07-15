@@ -1,0 +1,11 @@
+<p>
+  component2 works!
+</p>
+<h4 *ngIf="user">Title : {{user.title}}<br>Author : {{user.author}}</h4>
+<form *ngIf="user" style="border: 1px solid black;padding:15px">
+  <label>Title: </label>
+<input type="text" name="title" [(ngModel)]="user.title" style="margin: 12px"><br>
+<label>Author:</label>
+<input type="text" name="author" [(ngModel)]="user.author"><br>
+<button type="button" (click)="updateUser(user)" style="margin: 10px 200px">Update</button>
+</form>

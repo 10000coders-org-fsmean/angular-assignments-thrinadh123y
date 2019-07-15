@@ -1,0 +1,19 @@
+<div class="form-group row">  
+  <label for="" class="vertical-label col-md-1"> Select Name</label>  
+  <div class="col-sm-8 col-md-4">  
+      <select class="hideLabel form-control" [(ngModel)]="obj" name="name" (change)="show(obj);">  
+           <option [ngValue]="obj" *ngFor="let obj of data;">  
+               {{obj.name}}  
+        </option>  
+   </select>  
+  </div>  
+</div> 
+<form #myform='ngForm' style="border: 1px solid black;padding:15px">
+  <label>ENTER TO SEARCH PRODUCT:</label>
+  <input type="text" name="name" ngModel><br>
+<button (click)='adddata(myform.value)' type="button" style="margin: 10px 200px">SearchData</button>
+</form>
+<div *ngIf="search">
+  <h4>not found</h4>
+</div>
+<app-details></app-details>

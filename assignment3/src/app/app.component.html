@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    <li *ngFor="let obj of data">{{obj.title}}</li>
+  </ul>
+</div>
+<button type="button" class="btn btn-primary" (click)="deletefirst()">Delete First Object</button>
+<button type="button" class="btn btn-secondary" (click)="deletelast()">Delete last object</button>
+<button type="button" class="btn btn-success" (click)="deletespecific()">Delete specific object</button>
+<button type="button" class="btn btn-danger" (click)="deleteodd()">Delete odd rows</button>
+<button type="button" class="btn btn-warning" (click)="deleteeven()">Delete even rows</button>
+<button type="button" class="btn btn-dark" (click)="changebg()">Add bgcolor</button>

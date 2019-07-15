@@ -1,0 +1,9 @@
+<div>
+  <h4>List of Citys</h4>
+  <ul>
+    <li *ngFor='let obj of data' (click)="details(obj)">{{obj.name}}</li>
+  </ul>
+</div>
+<div>
+ <app-details></app-details>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <ul style="list-style: none;float: left;">
+    <li *ngFor="let obj1 of allproducts" style="float:left;margin-right: 100px;">
+      <span>{{obj1.name}}</span> <br>
+      <img src="{{obj1.url}}" style="width: 100px;height:100px">
+     <p style="color: blueviolet">Price : {{obj1.price}}</p>
+  <p style="color:blue">Brand : {{obj1.brand}}</p>
+  <button style="color: black;background: lightgray;float:right;border-radius:50px;" (click)="addtocart(obj1)">Add to cart</button>
+    </li>
+  </ul>
+</div>

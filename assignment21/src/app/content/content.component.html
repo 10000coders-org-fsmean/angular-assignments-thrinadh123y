@@ -1,0 +1,41 @@
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- Slider -->
+    <section id="slider"><a href="#"><img src="../../assets/images/demo/960x360.gif" alt=""></a></section>
+    <!-- main content -->
+    <div id="homepage">
+      <!-- Services -->
+      <section id="services" class="clear" *ngFor="let obj2 of middle">
+        <article class="one_third">
+          <figure><img src="{{obj2.middleurl}}" width="290" height="180" alt="">
+            <figcaption>
+              <h2>{{obj2.heading}}</h2>
+              <p>{{obj2.paragraph}}</p>
+              <footer class="more"><a href="#">Read More &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <!-- / Services -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- Introduction -->
+      <section id="intro" class="last clear">
+        <article>
+          <figure *ngFor="let obj of last"><img src="{{obj.url}}" width="450" height="250" alt="">
+            <figcaption>
+              <h2>{{obj.head}}</h2>
+             <p>{{obj.para}}</p>
+              <footer class="more"><a href="#">Read More &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <!-- / Introduction -->
+    </div>
+    <!-- / content body -->
+  </div>
+</div>

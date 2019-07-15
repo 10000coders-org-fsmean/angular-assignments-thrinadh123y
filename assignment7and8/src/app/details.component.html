@@ -1,0 +1,12 @@
+<h3>Welcome to products</h3>
+<div *ngIf="details">
+    <ul style="list-style: none;float: left;">
+      <li style="float:left;margin-right: 100px;">
+        <span>{{details.name}}</span> <br>
+        <img src="{{details.url}}" style="width: 100px;height:100px">
+       <p style="color: blueviolet">Price : {{details.price}}</p>
+    <p style="color:blue">Brand : {{details.brand}}</p>
+    <button style="color: black;background: lightgray;float:right;border-radius:50px;" (click)="addtocart(obj1)">Add to cart</button>
+      </li>
+    </ul>
+  </div>
